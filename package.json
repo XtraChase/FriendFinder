@@ -19,8 +19,6 @@
   "homepage": "https://github.com/XtraChase/FriendFinder#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "fs": "0.0.1-security",
-    "jquery": "^3.4.1",
     "path": "^0.12.7"
   }
 }
