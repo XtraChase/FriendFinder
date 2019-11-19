@@ -5,6 +5,18 @@
 
 body {
   font-family: "Lato", sans-serif;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+  font-weight: bold;
+  background-image: url(https://www.inovex.de/blog/wp-content/uploads/2018/01/hive-lookups-udf.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 75%;
+}
+
+@media screen and (max-width: 640px) {
+  body {
+    background-size: 95%;
+  }
 }
 
 .page-container {
@@ -31,8 +43,8 @@ header {
   text-align: center;
   background-color: #d4d4d4;
   /* For browsers that do not support gradients */
-  background-image: -webkit-gradient(linear, left top, right top, from(#fff7ae), to(#ffec43));
-  background-image: linear-gradient(to right, #fff7ae, #ffec43);
+  background-image: -webkit-gradient(linear, left top, right top, from(#ffd97b), to(#ffc107));
+  background-image: linear-gradient(to right, #ffd97b, #ffc107);
   height: 10vh;
   width: 100%;
   -webkit-box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.5);
@@ -68,32 +80,39 @@ h4 {
   margin: 15px 0px 5px 0px;
 }
 
-.btn {
+.btn,
+#btnHome {
   padding: 6px 12px 6px 12px;
   border-radius: 3px;
   border-style: none;
   text-transform: uppercase;
   letter-spacing: 3px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
-  background-image: -webkit-gradient(linear, left top, right top, from(#fff7ae), to(#ffec43));
-  background-image: linear-gradient(to right, #fff7ae, #ffec43);
+  background-image: -webkit-gradient(linear, left top, right top, from(#ffd97b), to(#ffc107));
+  background-image: linear-gradient(to right, #ffd97b, #ffc107);
 }
 
 @media screen and (max-width: 640px) {
-  .btn {
-    margin: 0px 0px 0px 5px;
+  .btn,
+  #btnHome {
     font-size: 0.8em;
   }
 }
 
-.btn:hover {
+#btnHome {
+  padding: 0px 12px 6px 12px;
+}
+
+.btn:hover,
+#btnHome:hover {
   -webkit-transform: translatey(-1.5px);
           transform: translatey(-1.5px);
   -webkit-filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
   filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
 }
 
-.btn:active {
+.btn:active,
+#btnHome:active {
   -webkit-transform: translateY(-0.2px);
           transform: translateY(-0.2px);
   -webkit-filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.4));
@@ -160,8 +179,8 @@ footer {
   place-items: center;
   background-color: #b9b9b9;
   /* For browsers that do not support gradients */
-  background-image: -webkit-gradient(linear, left top, right top, from(#fff7ae), to(#ffec43));
-  background-image: linear-gradient(to right, #fff7ae, #ffec43);
+  background-image: -webkit-gradient(linear, left top, right top, from(#ffd97b), to(#ffc107));
+  background-image: linear-gradient(to right, #ffd97b, #ffc107);
   position: absolute;
   height: 2.5rem;
   width: 100%;

@@ -1,10 +1,37 @@
 var friends = [
   {
-    name: "Chase",
+    name: "Josie",
     photo:
-      "https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/65386360_10213866510128248_3379027513962397696_n.jpg?_nc_cat=108&_nc_oc=AQnLwtbKAc37Fme78aMLDj4UdvzK5mKW4TSw_AehYItKVVn1We3iZ75emFRGfOrsfdM&_nc_ht=scontent-atl3-1.xx&oh=1841f260104115849e313b766490363d&oe=5E41D235",
+      "https://i.pinimg.com/originals/90/41/f0/9041f0a56732ec5ff824ea92852df69e.jpg",
     scores: [5, 2, 5, 3, 5, 2, 2, 5, 2, 2],
-    id: 12498
+    id: 1
+  },
+  {
+    name: "Sarah",
+    photo: "https://cdn.acidcow.com/pics/20180828/pretty_girls_01.jpg",
+    scores: [5, 3, 4, 1, 5, 3, 2, 1, 4, 3],
+    id: 2
+  },
+  {
+    name: "Rachel",
+    photo:
+      "https://pbs.twimg.com/profile_images/753921597409488896/EkXpd0mo_400x400.jpg",
+    scores: [5, 5, 3, 4, 2, 5, 3, 5, 3, 1],
+    id: 3
+  },
+  {
+    name: "Emma",
+    photo:
+      "https://piximus.net/media2/45329/pretty-girls-that-are-extremely-easy-on-the-eyes-1.jpg",
+    scores: [4, 4, 5, 4, 2, 1, 2, 1, 3, 5],
+    id: 4
+  },
+  {
+    name: "Meghan",
+    photo:
+      "http://www.cavemancircus.com/wp-content/uploads/images/2019/sept/pretty_girls/pretty_girls_21.jpg",
+    scores: [5, 4, 3, 4, 2, 1, 5, 4, 3, 5],
+    id: 5
   }
 ];
 
