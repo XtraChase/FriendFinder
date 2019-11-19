@@ -1,6 +1,8 @@
 //         ****** Main APP ******
 // Capture the form inpute
 $("#submit").on("click", function(event) {
+  var friendsObject;
+
   event.preventDefault();
 
   //     ***** Modal popup after clicking submit *****
@@ -54,24 +56,43 @@ $("#submit").on("click", function(event) {
         $("#q8").val(),
         $("#q9").val(),
         $("#q10").val()
-      ]
+      ],
+      id: Math.floor(Math.random() * Number.MAX_SAFE_INTEGER) // unique ID
     };
 
-    // Modal Content
-    var testPerson = {
-      name: "John Smith",
-      image: "(image)"
-    };
-
-    function modalView(element) {
+    function modalView(element, score) {
       const modalBody = document.getElementById("modalBody");
       let dataHtml = `<h2>Meet Your Match!</h2>
-          <p>${element.name}</p>
-          <img src="${element.image}" alt="Match Photo"/>`;
+          <p>Name: ${element.name}</p>
+          <p>Match Score: ${100 - score * 10 + "%"}</p></br>
+          <img src="${element.photo}" alt="Match Photo" width="350"/>`;
       modalBody.innerHTML = dataHtml;
     }
 
-    modalView(testPerson);
+    //Find friend with minimum score
+    var friendScores = [],
+      totalDiff = 0;
+    var minDiff = Number.MAX_SAFE_INTEGER,
+      indexOfMinDiff = -1;
+    var i, j;
+    $.getJSON("/api/friends", function(json) {
+      friendsObject = json;
+      $.each(friendsObject, function(i) {
+        friendScores = friendsObject[i].scores;
+        if (userData.id != friendsObject[i].id) {
+          $.each(friendScores, function(j) {
+            totalDiff += Math.abs(userData.scores[j] - friendScores[j]);
+            if (totalDiff < minDiff) {
+              minDiff = totalDiff;
+              indexOfMinDiff = i;
+            }
+          });
+          totalDiff = 0;
+        }
+      });
+      if (indexOfMinDiff != -1)
+        modalView(friendsObject[indexOfMinDiff], minDiff);
+    });
 
     // AJAX post the data to the friends API.
     $.post("/api/friends", userData, function(data) {
@@ -79,7 +100,5 @@ $("#submit").on("click", function(event) {
       $("#match-name").text(data.name);
       $("#match-img").attr("src", data.photo);
     });
-  } else {
-    alert("Please fill out all fields before submitting!");
-  }
+  } else alert("Please fill out all fields before submitting!");
 });
