@@ -1,9 +1,9 @@
 var friends = [
   {
-    name: "Jack",
+    name: "Chase",
     photo:
-      "https://scontent.fatl1-1.fna.fbcdn.net/v/t1.0-9/51661642_10213105560850037_8153202019327279104_o.jpg?_nc_cat=105&_nc_oc=AQm5QfOfTl95Gn-tc2_xv4ux7sfrFZCebw0sYKRtSKJWPpqnbRDAudLPAdu3MhQtEpM&_nc_ht=scontent.fatl1-1.fna&oh=6393c5ac6a790d10a1af66b1bf5472d1&oe=5E55541D",
-    scores: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]
+      "https://scontent-atl3-1.xx.fbcdn.net/v/t1.0-9/65386360_10213866510128248_3379027513962397696_n.jpg?_nc_cat=108&_nc_oc=AQnLwtbKAc37Fme78aMLDj4UdvzK5mKW4TSw_AehYItKVVn1We3iZ75emFRGfOrsfdM&_nc_ht=scontent-atl3-1.xx&oh=1841f260104115849e313b766490363d&oe=5E41D235",
+    scores: [5, 2, 5, 3, 5, 2, 2, 5, 2, 2]
   }
 ];
 

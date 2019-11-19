@@ -57,6 +57,22 @@ $("#submit").on("click", function(event) {
       ]
     };
 
+    // Modal Content
+    var testPerson = {
+      name: "John Smith",
+      image: "(image)"
+    };
+
+    function modalView(element) {
+      const modalBody = document.getElementById("modalBody");
+      let dataHtml = `<h2>Meet Your Match!</h2>
+          <p>${element.name}</p>
+          <img src="${element.image}" alt="Match Photo"/>`;
+      modalBody.innerHTML = dataHtml;
+    }
+
+    modalView(testPerson);
+
     // AJAX post the data to the friends API.
     $.post("/api/friends", userData, function(data) {
       // Grab the result from the AJAX post so that the best match's name and photo are displayed.
